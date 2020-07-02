@@ -1,0 +1,60 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+
+\usepackage{vmargin}
+
+\setpapersize{A4}
+\setmargins{2.54cm}       
+{2.54cm}                        
+{15.5cm}                      
+{21.42cm}                    
+{5pt}                           
+{1cm}                           
+{5pt}                            
+{2cm} 
+
+\title{Interrupciones}
+\date{Julio 2020}
+
+\usepackage{natbib}
+\usepackage{graphicx}
+
+\begin{document}
+
+
+\begin{titlepage}
+\centering
+{\bfseries\LARGE Universidad de Atioquia\par}
+\vspace{1cm}
+{\scshape\Large Facultad de Ingenier\'ia Electr\'onica \par}
+\vspace{3cm}
+{\scshape\Huge Interrupciones \par}
+\vspace{3cm}
+{\itshape\Large Proyecto de Investigaci\'on \par}
+\vfill
+{\Large Autor: \par}
+{\Large Daniel Felipe Y\'epez Taimal \par}
+\vfill
+{\Large Julio 2020 \par}
+\end{titlepage}
+
+\maketitle
+
+Actualmente las interrupciones han sido de mucha ayuda en la electrónica, puesto que, han ayudado en la optimización de la gestión de los dispositivos de entrada y salida. En un inicio los procesadores y microprocesadores, para gestionar estos dispositivos, utilizaban un método simple pero ineficiente, el cual consistía en revisar continuamente si en algún momento se solicita la atención del microprocesador, esto a pesar de que solucionaba el problema significaba gastar gran cantidad de tiempo que podría ser implementado en otras tareas. Gracias a esto las interrupciones se han convertido en la mejor forma de gestionar estos procesos.\\
+
+Las interrupciones se podrían definir como un artificio hardware/software, específicamente es una señal que indica que se debe interrumpir el curso de ejecución actual y ejecutar un código especifico, así pues, las interrupciones tienen dos niveles el Hardware y el Software. En el primer nivel un dispositivo genera la solicitud de interrupción, entonces el microprocesador, tiene que terminar la instrucción que se encuentra realizando, y después de concluida esta instrucción se realiza un salto a una subrutina donde se efectúa el tratamiento de la interrupción; por la parte del Software, justo cuando se termina el proceso antes de la interrupción, se guarda esa dirección de memoria, se procesa la interrupción y se reanuda con la instrucción del programa principal.\\
+
+En las implementaciones de la cotidianidad, los procesos no suelen ser tan simples, por lo que presentan situaciones donde al microprocesador se le solicita una interrupción mientras otra interrupción esta en espera; para estos casos se utiliza un nivel de jerarquía en las interrupciones, a nivel del Hardware encontramos a las Enmascarables y a las no enmascarables. Las interrupciones de tipo Hardware no son programadas y pueden ocurrir en cualquier momento, dentro de ellas las de mayor prioridad son las interrupciones no enmascarables, aun así el procesador puede no atenderlas, ignorarlas (enmascarables) o evitar atenderlas (no enmascarables); por parte del Software las interrupciones son programadas y normalmente son usadas para hacer uso de los dispositivos  I/O, estas interrupciones son programadas por el usuario y tienen una prioridad muy alta (por encima de las interrupciones de Hardware).\\
+
+
+
+\newpage
+
+\bibliographystyle{plain}
+\begin{thebibliography}{X}
+\bibitem{Man} \textsc{Manuel Alfonseca M.A.M},
+\textit{La Maquina de Turing}, Madrid, España, 2000.\bibitem{Jav} \textsc{Javier de la Cuesta, J.M.C},\textit{ La deuda de la inteligencia artificial con el matematico Godel}, 2019.
+\bibitem{Jul} \textsc{Julio Cesar, J.C.L},\textit{ La maquina universal de Turing}, Edicion 28, 2007.
+\bibitem{His} \textsc{History Chanel[Documentales completos en español]},\textit{Documentales La Historia de la computacion y la computadora}, 2016.
+\end{thebibliography}
+\end{document}
